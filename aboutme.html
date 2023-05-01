@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="shortcut icon" href="img/фавикон.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="all">
+        <div class="header">
+            <a href="index.html" class="logo"><img src="img/logo.svg" alt="логотип"></a>
+            <ul class="menu">
+                <li class="menu_list"><a class="menu_link" href="index.html">Главная</a></li>
+                <li class="menu_list"><a class="menu_link" href="students.html">Студенты</a></li>
+                <li class="menu_list"><a class="menu_link" href="about.html">О курсе</a></li>
+                <li class="menu_list"><a class="menu_link" href="contacts.html">Контакты</a></li>
+            </ul>
+            <button class="button">Войти</button>
+        </div> 
+        <div class="block">
+            <p class="form_title">Войти на сайт</p>
+            <div>
+                <form class="form" action="form.php" method="get">
+                    <input class="iput_box" type="text" placeholder="Логин">
+                    <input class="iput_box" type="password" placeholder="Пароль">
+                    <button class="button1" type="submit">Войти</button>
+                </form>
+            </div>
+            <script>
+                const buttonEl = document.querySelector('.button');
+                const blockEl = document.querySelector('.block');
+                buttonEl.addEventListener(`click`, function (e) {
+                    blockEl.classList.toggle('visible');
+                });
+            </script>
+        </div>
+               
+        <div class="main">
+            <h1 class="title">Добро пожаловать на мою страницу! 
+            </h1>
+            <h2 id="myname">Меня зовут Анна Бокарева &#128075; </h2>
+            <div class="myblock">
+                <div><img src="img/myphoto.jpg" alt="мое фото" class="studentphoto"></div>
+                <div><button class="mybutton">Связаться со мной</button></div>
+            </div>    
+            <div class="mycontactblock">
+                <p class="form_title">Получить обратную связь</p>
+                <div>
+                    <form class="form1" action="form.php" method="get">
+                        <p><input class="iput_box1" type="text" placeholder="Анна">  Ваше имя</p>
+                        <p><input class="iput_box1" type="email" required>  Почта</p>
+                        <p><input class="iput_box1" type="text">  Телефон</p>
+                        <button class="button1" type="submit">Отправить</button>
+                    </form>
+                </div>
+                <script>
+                const mybuttonEl = document.querySelector('.mybutton');
+                const mycontactblockEl = document.querySelector('.mycontactblock');
+                mybuttonEl.addEventListener(`click`, function (e) {mycontactblockEl.classList.toggle('visible');});
+                </script>
+            </div>                                                
+            <div class="common-content">
+                <div class="main-content">
+                    <div class="main-section">
+                        <h3 class="title3">Мой опыт</h3>
+                        <ul class="ul">
+                            <li class="list">SMM </li>
+                            <li class="list">интернет-маркетинг </li>
+                            <li class="list">контекстная реклама </li>
+                            <li class="list">SEO-оптимизация </li>
+                            <li class="list">организация и автоматизация бизнес-процессов </li>
+                        </ul>
+                    </div>
+                    <div class="main-section">
+                        <h3 class="title3">Чему я научилась на курсе</h3>
+                        <table border="1" cellspacing="0" class="table"> 
+                            <tr>
+                                <th class="colorth">Темы курса</th>
+                                <th class="colorth">Преподаватель</th>
+                                <th class="colorth" colspan="2">Полученные навыки</th>
+                            </tr>
+                            <tr class="tr">
+                                <td class="align-td">Основы html</td>
+                                <td class="align-td">Кадочников Алексей</td>
+                                <td class="align-td">Верстка макета</td>
+                                <td class="align-td">VSC, Figma</td>
+                            </tr>
+                            <tr class="tr">
+                                <td class="align-td">Основы CSS</td>
+                                <td class="align-td">Кадочников Алексей</td>
+                                <td class="align-td">Cтилизация элементов макета</td>
+                                <td class="align-td">VSC, Figma</td>
+                            </tr>
+                            <tr class="tr">
+                                <td class="align-td">Основы JavaScript</td>
+                                <td class="align-td">Кадочников Алексей</td>
+                                <td class="align-td">Подключение JS кода</td>
+                                <td class="align-td">VSC</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        2023 &copy; <a class="footer-text" href="#"> учебный центр </a>
+    </div>
+</body>
+
+</html>
